@@ -1,0 +1,17 @@
+<!-- client/views/team.html -->
+ 
+<template name="team">
+  <li>
+    {{#if editing}}
+      <form class="form-edit"> 
+        <input name="name" type="text" value="{{name}}">
+        <button type="submit">Submit</button>
+        <a class="cancel" href="#">Cancel</a>
+      </form>
+    {{else}}
+      {{name}} 
+      <a href="#" class="edit">edit</a> 
+      <a href="#" class="remove">delete</a>
+    {{/if}}
+  </li>
+</template>
